@@ -1,0 +1,1671 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese);
+@font-face {
+	font-family: "basiccontrols";
+	src: url("basiccontrols.eot");
+	src: url("basiccontrols.eot#iefix") format("embedded-opentype"),
+			url("basiccontrols.woff") format("woff"),
+			url("basiccontrols.ttf") format("truetype"),
+			url("basiccontrols.svg#basic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider2 {
+	display: inline-block;
+	position: relative;
+	max-width: 800px;
+	
+	width: 100%;
+	margin-top: 10px;
+}
+.csslider2 > .cs_anchor {
+	display: none;
+}
+.csslider2 > ul {
+	position: relative;
+	z-index: 1;
+	font-size: 0;
+	line-height: 0;
+	margin: 0 auto;
+	padding: 0;
+	
+	overflow: hidden;
+	white-space: nowrap;
+}
+.csslider2 > ul > li.img img {
+	width: 100%;
+}
+.csslider2 > ul > li.img {
+	font-size: 0pt;
+}
+.csslider2 > ul > li {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 15px;
+	font-size: initial;
+	line-height: normal;
+	white-space: normal;
+	vertical-align: top;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.csslider2 .cs_lnk{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	font-size: 0pt;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.csslider2 > ul > li.img,
+.csslider2 > .cs_arrowprev,
+.csslider2 > .cs_arrownext,
+.csslider2 > .cs_bullets,
+.csslider2 > .cs_play_pause {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}.csslider2 > .cs_arrowprev,
+.csslider2 > .cs_arrownext {
+	position: absolute;
+	top: 50%;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	z-index: 5;
+}
+.csslider2 > .cs_arrowprev > label,
+.csslider2 > .cs_arrownext > label {
+	position: absolute;
+
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0;
+	z-index: -1;
+}
+.csslider2 > .cs_arrowprev {
+	left: 0;
+}
+.csslider2 > .cs_arrownext {
+	right: 0;
+}
+
+.csslider2 > .slide:checked ~ .cs_arrowprev > label,
+.csslider2 > .slide:checked ~ .cs_arrownext > label {
+	opacity: 0;
+	z-index: -1;
+}
+
+
+
+.csslider2 > #cs_slide2_0:checked ~ .cs_arrowprev > label.num7,
+.csslider2 > #cs_pause2_0:checked ~ .cs_arrowprev > label.num7,
+.csslider2 > #cs_slide2_0:checked ~ .cs_arrownext > label.num1,
+.csslider2 > #cs_pause2_0:checked ~ .cs_arrownext > label.num1, 
+.csslider2 > #cs_slide2_1:checked ~ .cs_arrowprev > label.num0,
+.csslider2 > #cs_pause2_1:checked ~ .cs_arrowprev > label.num0,
+.csslider2 > #cs_slide2_1:checked ~ .cs_arrownext > label.num2,
+.csslider2 > #cs_pause2_1:checked ~ .cs_arrownext > label.num2, 
+.csslider2 > #cs_slide2_2:checked ~ .cs_arrowprev > label.num1,
+.csslider2 > #cs_pause2_2:checked ~ .cs_arrowprev > label.num1,
+.csslider2 > #cs_slide2_2:checked ~ .cs_arrownext > label.num3,
+.csslider2 > #cs_pause2_2:checked ~ .cs_arrownext > label.num3, 
+.csslider2 > #cs_slide2_3:checked ~ .cs_arrowprev > label.num2,
+.csslider2 > #cs_pause2_3:checked ~ .cs_arrowprev > label.num2,
+.csslider2 > #cs_slide2_3:checked ~ .cs_arrownext > label.num4,
+.csslider2 > #cs_pause2_3:checked ~ .cs_arrownext > label.num4, 
+.csslider2 > #cs_slide2_4:checked ~ .cs_arrowprev > label.num3,
+.csslider2 > #cs_pause2_4:checked ~ .cs_arrowprev > label.num3,
+.csslider2 > #cs_slide2_4:checked ~ .cs_arrownext > label.num5,
+.csslider2 > #cs_pause2_4:checked ~ .cs_arrownext > label.num5, 
+.csslider2 > #cs_slide2_5:checked ~ .cs_arrowprev > label.num4,
+.csslider2 > #cs_pause2_5:checked ~ .cs_arrowprev > label.num4,
+.csslider2 > #cs_slide2_5:checked ~ .cs_arrownext > label.num6,
+.csslider2 > #cs_pause2_5:checked ~ .cs_arrownext > label.num6, 
+.csslider2 > #cs_slide2_6:checked ~ .cs_arrowprev > label.num5,
+.csslider2 > #cs_pause2_6:checked ~ .cs_arrowprev > label.num5,
+.csslider2 > #cs_slide2_6:checked ~ .cs_arrownext > label.num7,
+.csslider2 > #cs_pause2_6:checked ~ .cs_arrownext > label.num7, 
+.csslider2 > #cs_slide2_7:checked ~ .cs_arrowprev > label.num6,
+.csslider2 > #cs_pause2_7:checked ~ .cs_arrowprev > label.num6,
+.csslider2 > #cs_slide2_7:checked ~ .cs_arrownext > label.num0,
+.csslider2 > #cs_pause2_7:checked ~ .cs_arrownext > label.num0 {
+	opacity: 1;
+	z-index: 5;
+}
+
+/* calculate autoplay */
+@-webkit-keyframes arrow {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-moz-keyframes arrow {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-ms-keyframes arrow {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-o-keyframes arrow {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@keyframes arrow {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+
+
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num7,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num1 {
+	-webkit-animation: arrow 64000ms infinite -2000ms;
+	-moz-animation: arrow 64000ms infinite -2000ms;
+	-ms-animation: arrow 64000ms infinite -2000ms;
+	-o-animation: arrow 64000ms infinite -2000ms;
+	animation: arrow 64000ms infinite -2000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num0,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num2 {
+	-webkit-animation: arrow 64000ms infinite 6000ms;
+	-moz-animation: arrow 64000ms infinite 6000ms;
+	-ms-animation: arrow 64000ms infinite 6000ms;
+	-o-animation: arrow 64000ms infinite 6000ms;
+	animation: arrow 64000ms infinite 6000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num1,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num3 {
+	-webkit-animation: arrow 64000ms infinite 14000ms;
+	-moz-animation: arrow 64000ms infinite 14000ms;
+	-ms-animation: arrow 64000ms infinite 14000ms;
+	-o-animation: arrow 64000ms infinite 14000ms;
+	animation: arrow 64000ms infinite 14000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num2,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num4 {
+	-webkit-animation: arrow 64000ms infinite 22000ms;
+	-moz-animation: arrow 64000ms infinite 22000ms;
+	-ms-animation: arrow 64000ms infinite 22000ms;
+	-o-animation: arrow 64000ms infinite 22000ms;
+	animation: arrow 64000ms infinite 22000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num3,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num5 {
+	-webkit-animation: arrow 64000ms infinite 30000ms;
+	-moz-animation: arrow 64000ms infinite 30000ms;
+	-ms-animation: arrow 64000ms infinite 30000ms;
+	-o-animation: arrow 64000ms infinite 30000ms;
+	animation: arrow 64000ms infinite 30000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num4,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num6 {
+	-webkit-animation: arrow 64000ms infinite 38000ms;
+	-moz-animation: arrow 64000ms infinite 38000ms;
+	-ms-animation: arrow 64000ms infinite 38000ms;
+	-o-animation: arrow 64000ms infinite 38000ms;
+	animation: arrow 64000ms infinite 38000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num5,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num7 {
+	-webkit-animation: arrow 64000ms infinite 46000ms;
+	-moz-animation: arrow 64000ms infinite 46000ms;
+	-ms-animation: arrow 64000ms infinite 46000ms;
+	-o-animation: arrow 64000ms infinite 46000ms;
+	animation: arrow 64000ms infinite 46000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_arrowprev > label.num6,
+.csslider2 > #cs_play2:checked ~ .cs_arrownext > label.num0 {
+	-webkit-animation: arrow 64000ms infinite 54000ms;
+	-moz-animation: arrow 64000ms infinite 54000ms;
+	-ms-animation: arrow 64000ms infinite 54000ms;
+	-o-animation: arrow 64000ms infinite 54000ms;
+	animation: arrow 64000ms infinite 54000ms;
+	
+}
+
+
+/* stop */
+.csslider2 > .slide:checked ~ .cs_arrowprev > label,
+.csslider2 > .slide:checked ~ .cs_arrownext > label,
+.csslider2 > .pause:checked ~ .cs_arrowprev > label,
+.csslider2 > .pause:checked ~ .cs_arrownext > label {
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+}
+
+
+/* /calculate autoplay */
+.csslider2 > .cs_bullets {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 6;
+	font-size: 0;
+	line-height: 8pt;
+	text-align: center;
+}
+.csslider2 > .cs_bullets > div {
+	margin-left: -50%;
+	width: 100%;
+}
+.csslider2 > .cs_bullets > label {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.csslider2 > .cs_bullets > label > .cs_thumb {
+	visibility: hidden;
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+	line-height: 0;
+	left: -32px;
+	top: -48px;
+}
+.csslider2 > .cs_bullets > label > .cs_thumb > img {
+	max-width: none;
+}.csslider2 > .cs_description {
+	z-index: 3;
+}
+.csslider2 > .cs_description a,
+.csslider2 > .cs_description a:visited,
+.csslider2 > .cs_description a:active {
+	color: inherit;
+}
+.csslider2 > .cs_description a:hover {
+	text-decoration: none;
+}
+.csslider2 > .cs_description > label {
+	position: absolute;
+	word-wrap: break-word;
+	white-space: normal;
+	text-align: left;
+	max-width: 50%;
+	left: 0;
+}
+.csslider2 > .cs_description > label > span {
+	vertical-align: top;
+}
+.csslider2 > .cs_description > label span {
+	display: inline-block;
+}.csslider2 > .cs_play_pause {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 5;
+}
+.csslider2 > .cs_play_pause > label {
+	position: absolute;
+	cursor: pointer;
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause,
+.csslider2 > .slide:checked ~ .cs_play_pause > .cs_play,
+.csslider2 > .pause:checked ~ .cs_play_pause > .cs_play {
+	display: block;
+	z-index: 5;
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_play,
+.csslider2 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider2 > .pause:checked ~ .cs_play_pause > .cs_pause {
+	display: none;
+	z-index: -1;
+}
+
+
+/* calculate autoplay */
+@-webkit-keyframes pauseChange {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-moz-keyframes pauseChange {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-ms-keyframes pauseChange {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@-o-keyframes pauseChange {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+@keyframes pauseChange {
+	0%, 12.49% { opacity: 1; z-index: 5; }
+	12.5%, 100%	{ opacity: 0; z-index: -1; }
+}
+
+
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num0 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite -2000ms;
+	-moz-animation: pauseChange 64000ms infinite -2000ms;
+	-ms-animation: pauseChange 64000ms infinite -2000ms;
+	-o-animation: pauseChange 64000ms infinite -2000ms;
+	animation: pauseChange 64000ms infinite -2000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num1 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 6000ms;
+	-moz-animation: pauseChange 64000ms infinite 6000ms;
+	-ms-animation: pauseChange 64000ms infinite 6000ms;
+	-o-animation: pauseChange 64000ms infinite 6000ms;
+	animation: pauseChange 64000ms infinite 6000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num2 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 14000ms;
+	-moz-animation: pauseChange 64000ms infinite 14000ms;
+	-ms-animation: pauseChange 64000ms infinite 14000ms;
+	-o-animation: pauseChange 64000ms infinite 14000ms;
+	animation: pauseChange 64000ms infinite 14000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num3 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 22000ms;
+	-moz-animation: pauseChange 64000ms infinite 22000ms;
+	-ms-animation: pauseChange 64000ms infinite 22000ms;
+	-o-animation: pauseChange 64000ms infinite 22000ms;
+	animation: pauseChange 64000ms infinite 22000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num4 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 30000ms;
+	-moz-animation: pauseChange 64000ms infinite 30000ms;
+	-ms-animation: pauseChange 64000ms infinite 30000ms;
+	-o-animation: pauseChange 64000ms infinite 30000ms;
+	animation: pauseChange 64000ms infinite 30000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num5 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 38000ms;
+	-moz-animation: pauseChange 64000ms infinite 38000ms;
+	-ms-animation: pauseChange 64000ms infinite 38000ms;
+	-o-animation: pauseChange 64000ms infinite 38000ms;
+	animation: pauseChange 64000ms infinite 38000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num6 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 46000ms;
+	-moz-animation: pauseChange 64000ms infinite 46000ms;
+	-ms-animation: pauseChange 64000ms infinite 46000ms;
+	-o-animation: pauseChange 64000ms infinite 46000ms;
+	animation: pauseChange 64000ms infinite 46000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_play_pause > .cs_pause.num7 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation: pauseChange 64000ms infinite 54000ms;
+	-moz-animation: pauseChange 64000ms infinite 54000ms;
+	-ms-animation: pauseChange 64000ms infinite 54000ms;
+	-o-animation: pauseChange 64000ms infinite 54000ms;
+	animation: pauseChange 64000ms infinite 54000ms;
+	
+}
+
+
+/* stop */
+.csslider2 > .slide:checked ~ .cs_play_pause > .cs_pause,
+.csslider2 > .pause:checked ~ .cs_play_pause > .cs_pause {
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+}
+
+
+/* /calculate autoplay */
+.csslider2 > ul > li.num0 {
+	left: 0%;
+}
+.csslider2 > ul > li.num1 {
+	left: 100%;
+}
+.csslider2 > ul > li.num2 {
+	left: 200%;
+}
+.csslider2 > ul > li.num3 {
+	left: 300%;
+}
+.csslider2 > ul > li.num4 {
+	left: 400%;
+}
+.csslider2 > ul > li.num5 {
+	left: 500%;
+}
+.csslider2 > ul > li.num6 {
+	left: 600%;
+}
+.csslider2 > ul > li.num7 {
+	left: 700%;
+}
+ 
+
+
+.csslider2 > #cs_slide2_0:checked ~ ul > li,
+.csslider2 > #cs_pause2_0:checked ~ ul > li {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	-o-transform: translateX(0%);
+	transform: translateX(0%);
+	
+}
+.csslider2 > #cs_slide2_1:checked ~ ul > li,
+.csslider2 > #cs_pause2_1:checked ~ ul > li {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+	
+}
+.csslider2 > #cs_slide2_2:checked ~ ul > li,
+.csslider2 > #cs_pause2_2:checked ~ ul > li {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	-o-transform: translateX(-200%);
+	transform: translateX(-200%);
+	
+}
+.csslider2 > #cs_slide2_3:checked ~ ul > li,
+.csslider2 > #cs_pause2_3:checked ~ ul > li {
+	-webkit-transform: translateX(-300%);
+	-moz-transform: translateX(-300%);
+	-ms-transform: translateX(-300%);
+	-o-transform: translateX(-300%);
+	transform: translateX(-300%);
+	
+}
+.csslider2 > #cs_slide2_4:checked ~ ul > li,
+.csslider2 > #cs_pause2_4:checked ~ ul > li {
+	-webkit-transform: translateX(-400%);
+	-moz-transform: translateX(-400%);
+	-ms-transform: translateX(-400%);
+	-o-transform: translateX(-400%);
+	transform: translateX(-400%);
+	
+}
+.csslider2 > #cs_slide2_5:checked ~ ul > li,
+.csslider2 > #cs_pause2_5:checked ~ ul > li {
+	-webkit-transform: translateX(-500%);
+	-moz-transform: translateX(-500%);
+	-ms-transform: translateX(-500%);
+	-o-transform: translateX(-500%);
+	transform: translateX(-500%);
+	
+}
+.csslider2 > #cs_slide2_6:checked ~ ul > li,
+.csslider2 > #cs_pause2_6:checked ~ ul > li {
+	-webkit-transform: translateX(-600%);
+	-moz-transform: translateX(-600%);
+	-ms-transform: translateX(-600%);
+	-o-transform: translateX(-600%);
+	transform: translateX(-600%);
+	
+}
+.csslider2 > #cs_slide2_7:checked ~ ul > li,
+.csslider2 > #cs_pause2_7:checked ~ ul > li {
+	-webkit-transform: translateX(-700%);
+	-moz-transform: translateX(-700%);
+	-ms-transform: translateX(-700%);
+	-o-transform: translateX(-700%);
+	transform: translateX(-700%);
+	
+}
+ 
+
+
+.csslider2 > ul > li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	opacity: 1;
+
+	-webkit-transition: -webkit-transform 2000ms cubic-bezier(0.4, 1.3, 0.65, 1);
+	-moz-transition: -moz-transform 2000ms cubic-bezier(0.4, 1.3, 0.65, 1);
+	-ms-transition: -ms-transform 2000ms cubic-bezier(0.4, 1.3, 0.65, 1);
+	-o-transition: -o-transform 2000ms cubic-bezier(0.4, 1.3, 0.65, 1);
+	transition: transform 2000ms cubic-bezier(0.4, 1.3, 0.65, 1);
+	
+
+	
+  	-webkit-transform: scale(1);
+  	-moz-transform: scale(1);
+  	-ms-transform: scale(1);
+  	-o-transform: scale(1);
+  	transform: scale(1);
+  	
+}
+
+/* calculate autoplay */
+@-webkit-keyframes slide {
+	0%, 9.375%	{ -webkit-transform: translateX(0%); }
+	12.5%, 21.875%	{ -webkit-transform: translateX(-100%); }
+	25%, 34.375%	{ -webkit-transform: translateX(-200%); }
+	37.5%, 46.875%	{ -webkit-transform: translateX(-300%); }
+	50%, 59.375%	{ -webkit-transform: translateX(-400%); }
+	62.5%, 71.875%	{ -webkit-transform: translateX(-500%); }
+	75%, 84.375%	{ -webkit-transform: translateX(-600%); }
+	87.5%, 96.875%	{ -webkit-transform: translateX(-700%); }
+	
+}
+@-moz-keyframes slide {
+	0%, 9.375%	{ -moz-transform: translateX(0%); }
+	12.5%, 21.875%	{ -moz-transform: translateX(-100%); }
+	25%, 34.375%	{ -moz-transform: translateX(-200%); }
+	37.5%, 46.875%	{ -moz-transform: translateX(-300%); }
+	50%, 59.375%	{ -moz-transform: translateX(-400%); }
+	62.5%, 71.875%	{ -moz-transform: translateX(-500%); }
+	75%, 84.375%	{ -moz-transform: translateX(-600%); }
+	87.5%, 96.875%	{ -moz-transform: translateX(-700%); }
+	
+}
+@-ms-keyframes slide {
+	0%, 9.375%	{ -ms-transform: translateX(0%); }
+	12.5%, 21.875%	{ -ms-transform: translateX(-100%); }
+	25%, 34.375%	{ -ms-transform: translateX(-200%); }
+	37.5%, 46.875%	{ -ms-transform: translateX(-300%); }
+	50%, 59.375%	{ -ms-transform: translateX(-400%); }
+	62.5%, 71.875%	{ -ms-transform: translateX(-500%); }
+	75%, 84.375%	{ -ms-transform: translateX(-600%); }
+	87.5%, 96.875%	{ -ms-transform: translateX(-700%); }
+	
+}
+@-o-keyframes slide {
+	0%, 9.375%	{ -o-transform: translateX(0%); }
+	12.5%, 21.875%	{ -o-transform: translateX(-100%); }
+	25%, 34.375%	{ -o-transform: translateX(-200%); }
+	37.5%, 46.875%	{ -o-transform: translateX(-300%); }
+	50%, 59.375%	{ -o-transform: translateX(-400%); }
+	62.5%, 71.875%	{ -o-transform: translateX(-500%); }
+	75%, 84.375%	{ -o-transform: translateX(-600%); }
+	87.5%, 96.875%	{ -o-transform: translateX(-700%); }
+	
+}
+@keyframes slide {
+	0%, 9.375%	{ transform: translateX(0%); }
+	12.5%, 21.875%	{ transform: translateX(-100%); }
+	25%, 34.375%	{ transform: translateX(-200%); }
+	37.5%, 46.875%	{ transform: translateX(-300%); }
+	50%, 59.375%	{ transform: translateX(-400%); }
+	62.5%, 71.875%	{ transform: translateX(-500%); }
+	75%, 84.375%	{ transform: translateX(-600%); }
+	87.5%, 96.875%	{ transform: translateX(-700%); }
+	
+}
+
+
+.csslider2  > #cs_play2:checked ~ ul > li {
+	-webkit-animation: slide 64000ms infinite;
+	-moz-animation: slide 64000ms infinite;
+	-ms-animation: slide 64000ms infinite;
+	-o-animation: slide 64000ms infinite;
+	animation: slide 64000ms infinite;
+	
+}
+
+
+.csslider2 > #cs_play2:checked ~ ul > li,
+.csslider2 > .pause:checked ~ ul > li {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+	
+}
+
+
+/* /calculate autoplay */
+.csslider2 > .cs_play_pause {
+  	-webkit-transition: .4s all 0s ease;
+  	-moz-transition: .4s all 0s ease;
+  	-ms-transition: .4s all 0s ease;
+  	-o-transition: .4s all 0s ease;
+  	transition: .4s all 0s ease;
+  	
+}
+.csslider2 > .cs_arrowprev {
+  	-webkit-transition: .4s all .15s ease;
+  	-moz-transition: .4s all .15s ease;
+  	-ms-transition: .4s all .15s ease;
+  	-o-transition: .4s all .15s ease;
+  	transition: .4s all .15s ease;
+  	
+}
+.csslider2 > .cs_arrownext {
+  	-webkit-transition: .4s all .3s ease;
+  	-moz-transition: .4s all .3s ease;
+  	-ms-transition: .4s all .3s ease;
+  	-o-transition: .4s all .3s ease;
+  	transition: .4s all .3s ease;
+  	
+}
+.csslider2 > .cs_arrowprev,
+.csslider2 > .cs_arrownext,
+.csslider2 > .cs_play_pause {
+	opacity: 0;
+	-webkit-transform: translateY(-30px);
+	-moz-transform: translateY(-30px);
+	-ms-transform: translateY(-30px);
+	-o-transform: translateY(-30px);
+	transform: translateY(-30px);
+	
+}
+
+.csslider2:hover > .cs_arrowprev,
+.csslider2:hover > .cs_arrownext,
+.csslider2:hover > .cs_play_pause {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	
+}.csslider2 > .cs_arrowprev > label,
+.csslider2 > .cs_arrownext > label {
+	padding: 17px;
+	height: 23px;
+	width: 23px;
+	margin-top: -28px;
+	margin-left: -28px;
+
+	background-color: #CBECFD;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.csslider2 > .cs_arrowprev > label,
+.csslider2 > .cs_arrownext > label,
+.csslider2 > .cs_arrowprev > label:after,
+.csslider2 > .cs_arrownext > label:after {
+	-webkit-transition: background-color 0.4s, color 0.4s;
+	-moz-transition: background-color 0.4s, color 0.4s;
+	-ms-transition: background-color 0.4s, color 0.4s;
+	-o-transition: background-color 0.4s, color 0.4s;
+	transition: background-color 0.4s, color 0.4s;
+	
+}
+.csslider2 > .cs_arrowprev {
+	margin-left: 2px;
+	left: 45px;
+}
+.csslider2 > .cs_arrownext {
+	margin-right: 2px;
+	right: 45px;
+}
+.csslider2 > .cs_arrowprev > label:after,
+.csslider2 > .cs_arrownext > label:after {
+	display: block;
+	font: 21px "basiccontrols";
+	color: #3A4A5A;
+	line-height: 23px;
+	text-align: center;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider2 > .cs_arrowprev > label:after {
+	line-height: 29px;
+}
+_:-ms-input-placeholder, :root .csslider2 > .cs_arrownext > label:after {
+	line-height: 29px;
+}
+
+.csslider2 > .cs_arrowprev > label:after {
+	content: '\e801';
+}
+.csslider2 > .cs_arrownext > label:after {
+	content: '\e800';
+}
+
+.csslider2 > .cs_arrowprev:hover > label,
+.csslider2 > .cs_arrownext:hover > label {
+	background-color: #e5f6fe;
+}
+
+.csslider2 > .cs_arrownext:hover > label:after {
+	color: #000;
+	-webkit-animation: nextArrow .7s infinite ease-in-out;
+	-moz-animation: nextArrow .7s infinite ease-in-out;
+	-ms-animation: nextArrow .7s infinite ease-in-out;
+	-o-animation: nextArrow .7s infinite ease-in-out;
+	animation: nextArrow .7s infinite ease-in-out;
+	
+}
+.csslider2 > .cs_arrowprev:hover > label:after {
+	color: #000;
+	-webkit-animation: prevArrow .7s infinite ease-in-out;
+	-moz-animation: prevArrow .7s infinite ease-in-out;
+	-ms-animation: prevArrow .7s infinite ease-in-out;
+	-o-animation: prevArrow .7s infinite ease-in-out;
+	animation: prevArrow .7s infinite ease-in-out;
+	
+}
+
+
+@-webkit-keyframes nextArrow {
+	0%, 100% { -webkit-transform: translateX(0px); }
+	25% { -webkit-transform: translateX(2px); }
+	75% { -webkit-transform: translateX(-2px); }
+}
+@-moz-keyframes nextArrow {
+	0%, 100% { -moz-transform: translateX(0px); }
+	25% { -moz-transform: translateX(2px); }
+	75% { -moz-transform: translateX(-2px); }
+}
+@-ms-keyframes nextArrow {
+	0%, 100% { -ms-transform: translateX(0px); }
+	25% { -ms-transform: translateX(2px); }
+	75% { -ms-transform: translateX(-2px); }
+}
+@-o-keyframes nextArrow {
+	0%, 100% { -o-transform: translateX(0px); }
+	25% { -o-transform: translateX(2px); }
+	75% { -o-transform: translateX(-2px); }
+}
+@keyframes nextArrow {
+	0%, 100% { transform: translateX(0px); }
+	25% { transform: translateX(2px); }
+	75% { transform: translateX(-2px); }
+}
+
+
+@-webkit-keyframes prevArrow {
+	0%, 100% { -webkit-transform: translateX(0px); }
+	25% { -webkit-transform: translateX(-2px); }
+	75% { -webkit-transform: translateX(2px); }
+}
+@-moz-keyframes prevArrow {
+	0%, 100% { -moz-transform: translateX(0px); }
+	25% { -moz-transform: translateX(-2px); }
+	75% { -moz-transform: translateX(2px); }
+}
+@-ms-keyframes prevArrow {
+	0%, 100% { -ms-transform: translateX(0px); }
+	25% { -ms-transform: translateX(-2px); }
+	75% { -ms-transform: translateX(2px); }
+}
+@-o-keyframes prevArrow {
+	0%, 100% { -o-transform: translateX(0px); }
+	25% { -o-transform: translateX(-2px); }
+	75% { -o-transform: translateX(2px); }
+}
+@keyframes prevArrow {
+	0%, 100% { transform: translateX(0px); }
+	25% { transform: translateX(-2px); }
+	75% { transform: translateX(2px); }
+}
+.csslider2 > .cs_play_pause > label{
+	text-decoration: none;
+	padding: 17px;
+	height: 23px;
+	width: 23px;
+
+	margin-top: -28px;
+	margin-left: -28px;
+
+	background-color: #CBECFD;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.csslider2 > .cs_play_pause > label,
+.csslider2 > .cs_play_pause > label:after {
+    -webkit-transition: background-color 0.4s ease, color 0.4s ease;
+    -moz-transition: background-color 0.4s ease, color 0.4s ease;
+    -o-transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.csslider2 > .cs_play_pause > label:after{
+	display: block;
+	font: 15px "basiccontrols";
+	color: #3A4A5A;
+	line-height: 25px;
+	text-align: center;
+}
+/* IE10+ hack */
+_:-ms-input-placeholder, :root .csslider2 > .cs_play_pause > label:after {
+	line-height: 28px;
+}
+.csslider2 > .cs_play_pause > .cs_play:after {
+	content: '\e802';
+}
+.csslider2 > .cs_play_pause > .cs_pause:after {
+	content: '\e803';
+}
+
+.csslider2 > .cs_play_pause:hover > label {
+	background-color: #e5f6fe;
+}
+.csslider2 > .cs_play_pause:hover > label:after {
+	color: #000;
+	-webkit-animation: playPause .7s infinite ease-in-out;
+	-moz-animation: playPause .7s infinite ease-in-out;
+	-ms-animation: playPause .7s infinite ease-in-out;
+	-o-animation: playPause .7s infinite ease-in-out;
+	animation: playPause .7s infinite ease-in-out;
+	
+}
+
+
+
+@-webkit-keyframes playPause {
+	0%, 100% { -webkit-transform: translateY(0px); }
+	25% { -webkit-transform: translateY(2px); }
+	75% { -webkit-transform: translateY(-2px); }
+}
+@-moz-keyframes playPause {
+	0%, 100% { -moz-transform: translateY(0px); }
+	25% { -moz-transform: translateY(2px); }
+	75% { -moz-transform: translateY(-2px); }
+}
+@-ms-keyframes playPause {
+	0%, 100% { -ms-transform: translateY(0px); }
+	25% { -ms-transform: translateY(2px); }
+	75% { -ms-transform: translateY(-2px); }
+}
+@-o-keyframes playPause {
+	0%, 100% { -o-transform: translateY(0px); }
+	25% { -o-transform: translateY(2px); }
+	75% { -o-transform: translateY(-2px); }
+}
+@keyframes playPause {
+	0%, 100% { transform: translateY(0px); }
+	25% { transform: translateY(2px); }
+	75% { transform: translateY(-2px); }
+}
+.csslider2 > .cs_bullets {
+	bottom: 5px;
+	margin-bottom: 5px;
+}
+.csslider2 > .cs_bullets > label {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: 0 5px;
+	padding: 9px;
+	background: #CBECFD;
+}
+
+
+.csslider2 > .cs_bullets > label > .cs_thumb {
+	border: 3px solid #CBECFD;
+	margin-top: -150%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	
+}
+.csslider2 > .cs_bullets > label > .cs_thumb:before {
+	content: '';
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	left: 50%;
+	margin-left: -1px;
+	bottom: -9px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	
+	border-top: 7px solid #CBECFD;
+}
+.csslider2 > .cs_bullets > label:hover > .cs_thumb {
+	margin-top: -12px;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+.csslider2 > .cs_bullets > label > .cs_point {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -2px;
+	margin-top: -2px;
+	background: transparent;
+	border-radius: 50%;
+	padding: 2px;
+}
+
+.csslider2 > .cs_bullets > label:hover > .cs_point,
+
+.csslider2 > #cs_slide2_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider2 > #cs_pause2_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider2 > #cs_slide2_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider2 > #cs_pause2_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider2 > #cs_slide2_2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider2 > #cs_pause2_2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider2 > #cs_slide2_3:checked ~ .cs_bullets > label.num3 > .cs_point,
+.csslider2 > #cs_pause2_3:checked ~ .cs_bullets > label.num3 > .cs_point,
+.csslider2 > #cs_slide2_4:checked ~ .cs_bullets > label.num4 > .cs_point,
+.csslider2 > #cs_pause2_4:checked ~ .cs_bullets > label.num4 > .cs_point,
+.csslider2 > #cs_slide2_5:checked ~ .cs_bullets > label.num5 > .cs_point,
+.csslider2 > #cs_pause2_5:checked ~ .cs_bullets > label.num5 > .cs_point,
+.csslider2 > #cs_slide2_6:checked ~ .cs_bullets > label.num6 > .cs_point,
+.csslider2 > #cs_pause2_6:checked ~ .cs_bullets > label.num6 > .cs_point,
+.csslider2 > #cs_slide2_7:checked ~ .cs_bullets > label.num7 > .cs_point,
+.csslider2 > #cs_pause2_7:checked ~ .cs_bullets > label.num7 > .cs_point {
+	background: #3A4A5A;
+}
+
+/* calculate autoplay */
+@-webkit-keyframes bullet {
+	0%, 12.49%	{ background: #3A4A5A; }
+	12.5%, 100% { background: transparent; }
+}
+@-moz-keyframes bullet {
+	0%, 12.49%	{ background: #3A4A5A; }
+	12.5%, 100% { background: transparent; }
+}
+@-ms-keyframes bullet {
+	0%, 12.49%	{ background: #3A4A5A; }
+	12.5%, 100% { background: transparent; }
+}
+@-o-keyframes bullet {
+	0%, 12.49%	{ background: #3A4A5A; }
+	12.5%, 100% { background: transparent; }
+}
+@keyframes bullet {
+	0%, 12.49%	{ background: #3A4A5A; }
+	12.5%, 100% { background: transparent; }
+}
+
+
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num0 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite -2000ms;
+	-moz-animation: bullet 64000ms infinite -2000ms;
+	-ms-animation: bullet 64000ms infinite -2000ms;
+	-o-animation: bullet 64000ms infinite -2000ms;
+	animation: bullet 64000ms infinite -2000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num1 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 6000ms;
+	-moz-animation: bullet 64000ms infinite 6000ms;
+	-ms-animation: bullet 64000ms infinite 6000ms;
+	-o-animation: bullet 64000ms infinite 6000ms;
+	animation: bullet 64000ms infinite 6000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num2 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 14000ms;
+	-moz-animation: bullet 64000ms infinite 14000ms;
+	-ms-animation: bullet 64000ms infinite 14000ms;
+	-o-animation: bullet 64000ms infinite 14000ms;
+	animation: bullet 64000ms infinite 14000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num3 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num3 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 22000ms;
+	-moz-animation: bullet 64000ms infinite 22000ms;
+	-ms-animation: bullet 64000ms infinite 22000ms;
+	-o-animation: bullet 64000ms infinite 22000ms;
+	animation: bullet 64000ms infinite 22000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num4 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num4 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 30000ms;
+	-moz-animation: bullet 64000ms infinite 30000ms;
+	-ms-animation: bullet 64000ms infinite 30000ms;
+	-o-animation: bullet 64000ms infinite 30000ms;
+	animation: bullet 64000ms infinite 30000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num5 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num5 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 38000ms;
+	-moz-animation: bullet 64000ms infinite 38000ms;
+	-ms-animation: bullet 64000ms infinite 38000ms;
+	-o-animation: bullet 64000ms infinite 38000ms;
+	animation: bullet 64000ms infinite 38000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num6 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num6 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 46000ms;
+	-moz-animation: bullet 64000ms infinite 46000ms;
+	-ms-animation: bullet 64000ms infinite 46000ms;
+	-o-animation: bullet 64000ms infinite 46000ms;
+	animation: bullet 64000ms infinite 46000ms;
+	
+}
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label.num7 > .cs_point,
+.csslider2 > #cs_pause2:checked ~ .cs_bullets > label.num7 > .cs_point {
+	-webkit-animation: bullet 64000ms infinite 54000ms;
+	-moz-animation: bullet 64000ms infinite 54000ms;
+	-ms-animation: bullet 64000ms infinite 54000ms;
+	-o-animation: bullet 64000ms infinite 54000ms;
+	animation: bullet 64000ms infinite 54000ms;
+	
+}
+
+
+
+
+.csslider2 > #cs_play2:checked ~ .cs_bullets > label > .cs_point,
+.csslider2 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  	-webkit-transition: none;
+  	-moz-transition: none;
+  	-ms-transition: none;
+  	-o-transition: none;
+  	transition: none;
+  	
+}
+
+
+/* stop */
+
+.csslider2 > .slide:checked ~ .cs_bullets > label > .cs_point,
+.csslider2 > .pause:checked ~ .cs_bullets > label > .cs_point {
+	-webkit-animation: none;
+	-moz-animation: none;
+	-ms-animation: none;
+	-o-animation: none;
+	animation: none;
+}
+
+
+/* /calculate autoplay */
+
+
+.csslider2 > .cs_description > label {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+	line-height: normal;
+	bottom: 40px;
+	left: 10px;
+}
+
+.csslider2 > .cs_description > label > span {
+	color: #3A4A5A;
+	position: relative;
+	padding: 13px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+.csslider2 > #cs_slide2_0:checked ~ .cs_description > .num0 > .cs_title,
+.csslider2 > #cs_slide2_0:checked ~ .cs_description > .num0 > .cs_descr,
+.csslider2 > #cs_pause2_0:checked ~ .cs_description > .num0 > .cs_title,
+.csslider2 > #cs_pause2_0:checked ~ .cs_description > .num0 > .cs_descr,
+.csslider2 > #cs_slide2_1:checked ~ .cs_description > .num1 > .cs_title,
+.csslider2 > #cs_slide2_1:checked ~ .cs_description > .num1 > .cs_descr,
+.csslider2 > #cs_pause2_1:checked ~ .cs_description > .num1 > .cs_title,
+.csslider2 > #cs_pause2_1:checked ~ .cs_description > .num1 > .cs_descr,
+.csslider2 > #cs_slide2_2:checked ~ .cs_description > .num2 > .cs_title,
+.csslider2 > #cs_slide2_2:checked ~ .cs_description > .num2 > .cs_descr,
+.csslider2 > #cs_pause2_2:checked ~ .cs_description > .num2 > .cs_title,
+.csslider2 > #cs_pause2_2:checked ~ .cs_description > .num2 > .cs_descr,
+.csslider2 > #cs_slide2_3:checked ~ .cs_description > .num3 > .cs_title,
+.csslider2 > #cs_slide2_3:checked ~ .cs_description > .num3 > .cs_descr,
+.csslider2 > #cs_pause2_3:checked ~ .cs_description > .num3 > .cs_title,
+.csslider2 > #cs_pause2_3:checked ~ .cs_description > .num3 > .cs_descr,
+.csslider2 > #cs_slide2_4:checked ~ .cs_description > .num4 > .cs_title,
+.csslider2 > #cs_slide2_4:checked ~ .cs_description > .num4 > .cs_descr,
+.csslider2 > #cs_pause2_4:checked ~ .cs_description > .num4 > .cs_title,
+.csslider2 > #cs_pause2_4:checked ~ .cs_description > .num4 > .cs_descr,
+.csslider2 > #cs_slide2_5:checked ~ .cs_description > .num5 > .cs_title,
+.csslider2 > #cs_slide2_5:checked ~ .cs_description > .num5 > .cs_descr,
+.csslider2 > #cs_pause2_5:checked ~ .cs_description > .num5 > .cs_title,
+.csslider2 > #cs_pause2_5:checked ~ .cs_description > .num5 > .cs_descr,
+.csslider2 > #cs_slide2_6:checked ~ .cs_description > .num6 > .cs_title,
+.csslider2 > #cs_slide2_6:checked ~ .cs_description > .num6 > .cs_descr,
+.csslider2 > #cs_pause2_6:checked ~ .cs_description > .num6 > .cs_title,
+.csslider2 > #cs_pause2_6:checked ~ .cs_description > .num6 > .cs_descr,
+.csslider2 > #cs_slide2_7:checked ~ .cs_description > .num7 > .cs_title,
+.csslider2 > #cs_slide2_7:checked ~ .cs_description > .num7 > .cs_descr,
+.csslider2 > #cs_pause2_7:checked ~ .cs_description > .num7 > .cs_title,
+.csslider2 > #cs_pause2_7:checked ~ .cs_description > .num7 > .cs_descr {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	
+}
+
+
+.csslider2 > #cs_slide2_0:checked ~ .cs_description > .num0 .cs_wrapper,
+.csslider2 > #cs_pause2_0:checked ~ .cs_description > .num0 .cs_wrapper,
+.csslider2 > #cs_slide2_1:checked ~ .cs_description > .num1 .cs_wrapper,
+.csslider2 > #cs_pause2_1:checked ~ .cs_description > .num1 .cs_wrapper,
+.csslider2 > #cs_slide2_2:checked ~ .cs_description > .num2 .cs_wrapper,
+.csslider2 > #cs_pause2_2:checked ~ .cs_description > .num2 .cs_wrapper,
+.csslider2 > #cs_slide2_3:checked ~ .cs_description > .num3 .cs_wrapper,
+.csslider2 > #cs_pause2_3:checked ~ .cs_description > .num3 .cs_wrapper,
+.csslider2 > #cs_slide2_4:checked ~ .cs_description > .num4 .cs_wrapper,
+.csslider2 > #cs_pause2_4:checked ~ .cs_description > .num4 .cs_wrapper,
+.csslider2 > #cs_slide2_5:checked ~ .cs_description > .num5 .cs_wrapper,
+.csslider2 > #cs_pause2_5:checked ~ .cs_description > .num5 .cs_wrapper,
+.csslider2 > #cs_slide2_6:checked ~ .cs_description > .num6 .cs_wrapper,
+.csslider2 > #cs_pause2_6:checked ~ .cs_description > .num6 .cs_wrapper,
+.csslider2 > #cs_slide2_7:checked ~ .cs_description > .num7 .cs_wrapper,
+.csslider2 > #cs_pause2_7:checked ~ .cs_description > .num7 .cs_wrapper {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	
+}
+.csslider2 > .cs_description > label > .cs_title {
+	background-color: #CBECFD;
+	margin: -5px 10px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 2;
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	-ms-transform: translateY(-100px);
+	-o-transform: translateY(-100px);
+	transform: translateY(-100px);
+	
+  	-webkit-transition: 950ms opacity 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -webkit-transform 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	-moz-transition: 950ms opacity 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -moz-transform 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	-ms-transition: 950ms opacity 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -ms-transform 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	-o-transition: 950ms opacity 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -o-transform 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	transition: 950ms opacity 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms transform 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	
+}
+.csslider2 > .cs_description > label > .cs_descr {
+	background-color: #e5f6fe;
+	font-size: 0.8em;
+	margin: -5px 20px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+	-webkit-transform: translateY(100px);
+	-moz-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	-o-transform: translateY(100px);
+	transform: translateY(100px);
+	
+  	-webkit-transition: 950ms opacity 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -webkit-transform 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	-moz-transition: 950ms opacity 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -moz-transform 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	-ms-transition: 950ms opacity 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -ms-transform 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	-o-transition: 950ms opacity 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -o-transform 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	transition: 950ms opacity 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms transform 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms visibility 850ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  	
+}
+
+
+.csslider2 > .cs_description > label > .cs_title > .cs_wrapper {
+	opacity: 0;
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	-ms-transform: translateY(-100px);
+	-o-transform: translateY(-100px);
+	transform: translateY(-100px);
+	
+	-webkit-transition: 950ms opacity 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -webkit-transform 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	-moz-transition: 950ms opacity 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -moz-transform 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	-ms-transition: 950ms opacity 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -ms-transform 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	-o-transition: 950ms opacity 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -o-transform 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	transition: 950ms opacity 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms transform 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	
+}
+.csslider2 > .cs_description > label > .cs_descr > .cs_wrapper {
+	opacity: 0;
+	-webkit-transform: translateY(100px);
+	-moz-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	-o-transform: translateY(100px);
+	transform: translateY(100px);
+	
+	-webkit-transition: 950ms opacity 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -webkit-transform 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	-moz-transition: 950ms opacity 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -moz-transform 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	-ms-transition: 950ms opacity 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -ms-transform 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	-o-transition: 950ms opacity 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms -o-transform 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	transition: 950ms opacity 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550), 950ms transform 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	
+}
+
+
+/* calculate autoplay */
+@-webkit-keyframes cs_title {
+	0.51953125%, 11.97046875%	{ opacity: 1; -webkit-transform: translateY(10px); z-index: 2; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -webkit-transform: translateY(0px); z-index: 2; visibility: visible;}
+	13.2421875%	{ opacity: 0; -webkit-transform: translateY(-100px); z-index: 2; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@-moz-keyframes cs_title {
+	0.51953125%, 11.97046875%	{ opacity: 1; -moz-transform: translateY(10px); z-index: 2; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -moz-transform: translateY(0px); z-index: 2; visibility: visible;}
+	13.2421875%	{ opacity: 0; -moz-transform: translateY(-100px); z-index: 2; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@-ms-keyframes cs_title {
+	0.51953125%, 11.97046875%	{ opacity: 1; -ms-transform: translateY(10px); z-index: 2; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -ms-transform: translateY(0px); z-index: 2; visibility: visible;}
+	13.2421875%	{ opacity: 0; -ms-transform: translateY(-100px); z-index: 2; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@-o-keyframes cs_title {
+	0.51953125%, 11.97046875%	{ opacity: 1; -o-transform: translateY(10px); z-index: 2; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -o-transform: translateY(0px); z-index: 2; visibility: visible;}
+	13.2421875%	{ opacity: 0; -o-transform: translateY(-100px); z-index: 2; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@keyframes cs_title {
+	0.51953125%, 11.97046875%	{ opacity: 1; transform: translateY(10px); z-index: 2; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; transform: translateY(0px); z-index: 2; visibility: visible;}
+	13.2421875%	{ opacity: 0; transform: translateY(-100px); z-index: 2; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+
+
+@-webkit-keyframes cs_descr {
+	0.51953125%, 11.97046875%	{ opacity: 1; -webkit-transform: translateY(-10px); z-index: 1; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -webkit-transform: translateY(0px); z-index: 1; visibility: visible;}
+	13.2421875%	{ opacity: 0; -webkit-transform: translateY(100px); z-index: 1; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@-moz-keyframes cs_descr {
+	0.51953125%, 11.97046875%	{ opacity: 1; -moz-transform: translateY(-10px); z-index: 1; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -moz-transform: translateY(0px); z-index: 1; visibility: visible;}
+	13.2421875%	{ opacity: 0; -moz-transform: translateY(100px); z-index: 1; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@-ms-keyframes cs_descr {
+	0.51953125%, 11.97046875%	{ opacity: 1; -ms-transform: translateY(-10px); z-index: 1; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -ms-transform: translateY(0px); z-index: 1; visibility: visible;}
+	13.2421875%	{ opacity: 0; -ms-transform: translateY(100px); z-index: 1; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@-o-keyframes cs_descr {
+	0.51953125%, 11.97046875%	{ opacity: 1; -o-transform: translateY(-10px); z-index: 1; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; -o-transform: translateY(0px); z-index: 1; visibility: visible;}
+	13.2421875%	{ opacity: 0; -o-transform: translateY(100px); z-index: 1; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+@keyframes cs_descr {
+	0.51953125%, 11.97046875%	{ opacity: 1; transform: translateY(-10px); z-index: 1; visibility: visible;}
+	0.7421875%, 11.7478125%	{ opacity: 1; transform: translateY(0px); z-index: 1; visibility: visible;}
+	13.2421875%	{ opacity: 0; transform: translateY(100px); z-index: 1; visibility: hidden;}
+	13.2521875%, 100%	{ z-index: 0; }
+}
+
+
+
+.csslider2 > #cs_play2:checked ~ .cs_description > .num0  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite -1400ms ease;
+	-moz-animation: cs_title 64000ms infinite -1400ms ease;
+	-ms-animation: cs_title 64000ms infinite -1400ms ease;
+	-o-animation: cs_title 64000ms infinite -1400ms ease;
+	animation: cs_title 64000ms infinite -1400ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num1  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 6600ms ease;
+	-moz-animation: cs_title 64000ms infinite 6600ms ease;
+	-ms-animation: cs_title 64000ms infinite 6600ms ease;
+	-o-animation: cs_title 64000ms infinite 6600ms ease;
+	animation: cs_title 64000ms infinite 6600ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num2  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 14600ms ease;
+	-moz-animation: cs_title 64000ms infinite 14600ms ease;
+	-ms-animation: cs_title 64000ms infinite 14600ms ease;
+	-o-animation: cs_title 64000ms infinite 14600ms ease;
+	animation: cs_title 64000ms infinite 14600ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num3  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 22600ms ease;
+	-moz-animation: cs_title 64000ms infinite 22600ms ease;
+	-ms-animation: cs_title 64000ms infinite 22600ms ease;
+	-o-animation: cs_title 64000ms infinite 22600ms ease;
+	animation: cs_title 64000ms infinite 22600ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num4  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 30600ms ease;
+	-moz-animation: cs_title 64000ms infinite 30600ms ease;
+	-ms-animation: cs_title 64000ms infinite 30600ms ease;
+	-o-animation: cs_title 64000ms infinite 30600ms ease;
+	animation: cs_title 64000ms infinite 30600ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num5  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 38600ms ease;
+	-moz-animation: cs_title 64000ms infinite 38600ms ease;
+	-ms-animation: cs_title 64000ms infinite 38600ms ease;
+	-o-animation: cs_title 64000ms infinite 38600ms ease;
+	animation: cs_title 64000ms infinite 38600ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num6  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 46600ms ease;
+	-moz-animation: cs_title 64000ms infinite 46600ms ease;
+	-ms-animation: cs_title 64000ms infinite 46600ms ease;
+	-o-animation: cs_title 64000ms infinite 46600ms ease;
+	animation: cs_title 64000ms infinite 46600ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num7  > .cs_title {
+	-webkit-animation: cs_title 64000ms infinite 54600ms ease;
+	-moz-animation: cs_title 64000ms infinite 54600ms ease;
+	-ms-animation: cs_title 64000ms infinite 54600ms ease;
+	-o-animation: cs_title 64000ms infinite 54600ms ease;
+	animation: cs_title 64000ms infinite 54600ms ease;
+}
+
+
+.csslider2 > #cs_play2:checked ~ .cs_description > .num0  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite -1150ms ease;
+	-moz-animation: cs_descr 64000ms infinite -1150ms ease;
+	-ms-animation: cs_descr 64000ms infinite -1150ms ease;
+	-o-animation: cs_descr 64000ms infinite -1150ms ease;
+	animation: cs_descr 64000ms infinite -1150ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num1  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 6850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 6850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 6850ms ease;
+	-o-animation: cs_descr 64000ms infinite 6850ms ease;
+	animation: cs_descr 64000ms infinite 6850ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num2  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 14850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 14850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 14850ms ease;
+	-o-animation: cs_descr 64000ms infinite 14850ms ease;
+	animation: cs_descr 64000ms infinite 14850ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num3  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 22850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 22850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 22850ms ease;
+	-o-animation: cs_descr 64000ms infinite 22850ms ease;
+	animation: cs_descr 64000ms infinite 22850ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num4  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 30850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 30850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 30850ms ease;
+	-o-animation: cs_descr 64000ms infinite 30850ms ease;
+	animation: cs_descr 64000ms infinite 30850ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num5  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 38850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 38850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 38850ms ease;
+	-o-animation: cs_descr 64000ms infinite 38850ms ease;
+	animation: cs_descr 64000ms infinite 38850ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num6  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 46850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 46850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 46850ms ease;
+	-o-animation: cs_descr 64000ms infinite 46850ms ease;
+	animation: cs_descr 64000ms infinite 46850ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num7  > .cs_descr {
+	-webkit-animation: cs_descr 64000ms infinite 54850ms ease;
+	-moz-animation: cs_descr 64000ms infinite 54850ms ease;
+	-ms-animation: cs_descr 64000ms infinite 54850ms ease;
+	-o-animation: cs_descr 64000ms infinite 54850ms ease;
+	animation: cs_descr 64000ms infinite 54850ms ease;
+}
+
+
+
+
+@-webkit-keyframes cs_title_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -webkit-transform: translateY(10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -webkit-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -webkit-transform: translateY(-100px); }
+}
+@-moz-keyframes cs_title_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -moz-transform: translateY(10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -moz-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -moz-transform: translateY(-100px); }
+}
+@-ms-keyframes cs_title_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -ms-transform: translateY(10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -ms-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -ms-transform: translateY(-100px); }
+}
+@-o-keyframes cs_title_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -o-transform: translateY(10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -o-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -o-transform: translateY(-100px); }
+}
+@keyframes cs_title_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; transform: translateY(10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; transform: translateY(-100px); }
+}
+
+
+@-webkit-keyframes cs_descr_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -webkit-transform: translateY(-10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -webkit-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -webkit-transform: translateY(100px); }
+}
+@-moz-keyframes cs_descr_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -moz-transform: translateY(-10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -moz-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -moz-transform: translateY(100px); }
+}
+@-ms-keyframes cs_descr_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -ms-transform: translateY(-10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -ms-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -ms-transform: translateY(100px); }
+}
+@-o-keyframes cs_descr_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; -o-transform: translateY(-10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; -o-transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; -o-transform: translateY(100px); }
+}
+@keyframes cs_descr_text {
+	0.51953125%, 11.97046875%	{ opacity: 1; transform: translateY(-10px); }
+	0.7421875%, 11.7478125%	{ opacity: 1; transform: translateY(0px); }
+	13.2421875%	{ opacity: 0; transform: translateY(100px); }
+}
+
+
+
+.csslider2 > #cs_play2:checked ~ .cs_description > .num0 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite -1250ms ease;
+	-moz-animation: cs_title_text 64000ms infinite -1250ms ease;
+	-ms-animation: cs_title_text 64000ms infinite -1250ms ease;
+	-o-animation: cs_title_text 64000ms infinite -1250ms ease;
+	animation: cs_title_text 64000ms infinite -1250ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num1 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 6750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 6750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 6750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 6750ms ease;
+	animation: cs_title_text 64000ms infinite 6750ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num2 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 14750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 14750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 14750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 14750ms ease;
+	animation: cs_title_text 64000ms infinite 14750ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num3 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 22750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 22750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 22750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 22750ms ease;
+	animation: cs_title_text 64000ms infinite 22750ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num4 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 30750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 30750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 30750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 30750ms ease;
+	animation: cs_title_text 64000ms infinite 30750ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num5 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 38750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 38750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 38750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 38750ms ease;
+	animation: cs_title_text 64000ms infinite 38750ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num6 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 46750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 46750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 46750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 46750ms ease;
+	animation: cs_title_text 64000ms infinite 46750ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num7 .cs_title > .cs_wrapper {
+	-webkit-animation: cs_title_text 64000ms infinite 54750ms ease;
+	-moz-animation: cs_title_text 64000ms infinite 54750ms ease;
+	-ms-animation: cs_title_text 64000ms infinite 54750ms ease;
+	-o-animation: cs_title_text 64000ms infinite 54750ms ease;
+	animation: cs_title_text 64000ms infinite 54750ms ease;
+}
+
+
+.csslider2 > #cs_play2:checked ~ .cs_description > .num0 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite -1000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite -1000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite -1000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite -1000ms ease;
+	animation: cs_descr_text 64000ms infinite -1000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num1 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 7000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 7000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 7000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 7000ms ease;
+	animation: cs_descr_text 64000ms infinite 7000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num2 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 15000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 15000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 15000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 15000ms ease;
+	animation: cs_descr_text 64000ms infinite 15000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num3 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 23000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 23000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 23000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 23000ms ease;
+	animation: cs_descr_text 64000ms infinite 23000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num4 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 31000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 31000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 31000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 31000ms ease;
+	animation: cs_descr_text 64000ms infinite 31000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num5 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 39000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 39000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 39000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 39000ms ease;
+	animation: cs_descr_text 64000ms infinite 39000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num6 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 47000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 47000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 47000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 47000ms ease;
+	animation: cs_descr_text 64000ms infinite 47000ms ease;
+}
+.csslider2 > #cs_play2:checked ~ .cs_description > .num7 .cs_descr > .cs_wrapper {
+	-webkit-animation: cs_descr_text 64000ms infinite 55000ms ease;
+	-moz-animation: cs_descr_text 64000ms infinite 55000ms ease;
+	-ms-animation: cs_descr_text 64000ms infinite 55000ms ease;
+	-o-animation: cs_descr_text 64000ms infinite 55000ms ease;
+	animation: cs_descr_text 64000ms infinite 55000ms ease;
+}
+
+
+
+
+.csslider2 > #cs_play2:checked ~ .cs_description > label > .cs_title,
+.csslider2 > #cs_play2:checked ~ .cs_description > label > .cs_descr,
+.csslider2 > #cs_play2:checked ~ .cs_description > label > .cs_title > .cs_wrapper,
+.csslider2 > #cs_play2:checked ~ .cs_description > label > .cs_descr > .cs_wrapper,
+.csslider2 > .pause:checked ~ .cs_description > label > .cs_title,
+.csslider2 > .pause:checked ~ .cs_description > label > .cs_descr,
+.csslider2 > .pause:checked ~ .cs_description > label > .cs_title > .cs_wrapper,
+.csslider2 > .pause:checked ~ .cs_description > label > .cs_descr > .cs_wrapper {
+  	-webkit-transition: none;
+  	-moz-transition: none;
+  	-ms-transition: none;
+  	-o-transition: none;
+  	transition: none;
+  	
+}
+
+/* /calculate autoplay *//* hide description & bullets on mobile devices */
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+	.csslider2 > .cs_description,
+	.csslider2 > .cs_bullets {
+		display: none;
+	}
+}

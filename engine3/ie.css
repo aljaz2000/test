@@ -1,0 +1,7 @@
+.csslider3 > .cs_arrowprev > label:after,
+.csslider3 > .cs_arrownext > label:after {
+	line-height: 30px;
+}
+.csslider3 > .cs_play_pause > label:after {
+	line-height: 28px;
+}

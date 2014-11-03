@@ -17,9 +17,9 @@
 		}
 	 
 h1{
-	font:"Comic Sans MS", cursive;
+	
 	font-size:40px;
-	text-aling: center;
+	
 }
 header{
 	text-align:center;}
@@ -47,7 +47,7 @@ header{
 			 }
         #nav_bar_1 a {
             font-weight: bold;
-            color:#0000;
+           
 			display: inline;
 			 }
 			 
@@ -80,6 +80,9 @@ header{
 		 		
 				
 			}
+#sliki{
+align:center;
+}
 			
 			
 			
